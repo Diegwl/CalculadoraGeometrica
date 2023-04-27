@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -16,19 +15,16 @@ public class Main {
                             3 - Sair
                             """);
                     selecao = entrada.nextInt();
-                    switch(selecao) {
-                        case (1): {
+                    switch (selecao) {
+                        case (1) -> {
                             CalculadoraPlanas();
-                            break;
                         }
-                        case (2): {
-                            //CalculadoraEspaciais();
-                            break;
+                        case (2) -> {
+                            CalculadoraEspaciais();
                         }
-                        case (3): {
-                            break;
+                        case (3) -> {
                         }
-                        default: {
+                        default -> {
                             System.out.println("Digite um valor válido!");
                         }
                     }
@@ -51,109 +47,98 @@ public class Main {
                                         6 - Sair
                                         """);
                 int opcao = Calculadora.entrada.nextInt();
-                switch(opcao){
-                    case (1):{
-                        while (true){
-                            try{
+                switch (opcao) {
+                    case (1) -> {
+                        while (true) {
+                            try {
                                 System.out.println("Digite o valor do Lado em centímetros: \n");
-                                double lado = Calculadora.entrada.nextInt();
+                                double lado = Calculadora.entrada.nextDouble();
                                 Quadrado q1 = new Quadrado(lado);
                                 System.out.printf("Perímetro: %.2fcm\n", q1.calculaPerimetro());
                                 System.out.printf("Área: %.2fcm²\n", q1.calculaArea());
                                 break;
-                            }
-                            catch (Exception e){
+                            } catch (Exception e) {
                                 System.out.println("Digite um número");
                                 Calculadora.entrada.nextLine();
                             }
                         }
-                        break;
                     }
-                    case (2):{
-                        while (true){
-                            try{
+                    case (2) -> {
+                        while (true) {
+                            try {
                                 System.out.println("Digite o valor do Raio em centímetros: \n");
-                                double raio = Calculadora.entrada.nextInt();
+                                double raio = Calculadora.entrada.nextDouble();
                                 Circulo c1 = new Circulo(raio);
                                 System.out.printf("Perímetro: %.2fcm\n", c1.calculaPerimetro());
                                 System.out.printf("Área: %.2fcm²\n", c1.calculaArea());
                                 break;
-                            }
-                            catch (Exception e){
+                            } catch (Exception e) {
                                 System.out.println("Digite um número");
                                 Calculadora.entrada.nextLine();
                             }
                         }
-                        break;
                     }
-                    case (3):{
-                        while (true){
-                            try{
+                    case (3) -> {
+                        while (true) {
+                            try {
                                 System.out.println("Digite o valor do Base em centímetros: \n");
-                                double base = Calculadora.entrada.nextInt();
+                                double base = Calculadora.entrada.nextDouble();
                                 System.out.println("Digite o valor do Altura em centímetros: \n");
-                                double altura = Calculadora.entrada.nextInt();
+                                double altura = Calculadora.entrada.nextDouble();
                                 System.out.println("Digite o valor do Lado 1 em centímetros: \n");
-                                double lado1 = Calculadora.entrada.nextInt();
+                                double lado1 = Calculadora.entrada.nextDouble();
                                 System.out.println("Digite o valor do Lado 2 em centímetros: \n");
-                                double lado2 = Calculadora.entrada.nextInt();
+                                double lado2 = Calculadora.entrada.nextDouble();
                                 System.out.println("Digite o valor do LAdo 3 em centímetros: \n");
-                                double lado3 = Calculadora.entrada.nextInt();
+                                double lado3 = Calculadora.entrada.nextDouble();
 
                                 Triangulo t1 = new Triangulo(base, altura, lado1, lado2, lado3);
                                 System.out.printf("Perímetro: %.2fcm\n", t1.calculaPerimetro());
                                 System.out.printf("Área: %.2fcm²\n", t1.calculaArea());
                                 break;
-                            }
-                            catch (Exception e){
+                            } catch (Exception e) {
                                 System.out.println("Digite um número");
                                 Calculadora.entrada.nextLine();
                             }
                         }
-                        break;
                     }
-                    case (4):{
-                        while (true){
-                            try{
+                    case (4) -> {
+                        while (true) {
+                            try {
                                 System.out.println("Digite o valor do Comprímento em centímetros: \n");
-                                double comprimento = Calculadora.entrada.nextInt();
+                                double comprimento = Calculadora.entrada.nextDouble();
                                 System.out.println("Digite o valor do Largura em centímetros: \n");
-                                double largura = Calculadora.entrada.nextInt();
+                                double largura = Calculadora.entrada.nextDouble();
 
                                 Retangulo r1 = new Retangulo(comprimento, largura);
                                 System.out.printf("Perímetro: %.2fcm\n", r1.calculaPerimetro());
                                 System.out.printf("Área: %.2fcm²\n", r1.calculaArea());
                                 break;
-                            }
-                            catch (Exception e){
+                            } catch (Exception e) {
                                 System.out.println("Digite um número");
                                 Calculadora.entrada.nextLine();
                             }
                         }
-                        break;
                     }
-                    case (5):{
-                        while (true){
-                            try{
+                    case (5) -> {
+                        while (true) {
+                            try {
                                 System.out.println("Digite o valor do Lado em centímetros: \n");
-                                double lado = Calculadora.entrada.nextInt();
+                                double lado = Calculadora.entrada.nextDouble();
 
                                 Hexagono h1 = new Hexagono(lado);
                                 System.out.printf("Perímetro: %.2fcm\n", h1.calculaPerimetro());
                                 System.out.printf("Área: %.2fcm²\n", h1.calculaArea());
                                 break;
-                            }
-                            catch (Exception e){
+                            } catch (Exception e) {
                                 System.out.println("Digite um número");
                                 Calculadora.entrada.nextLine();
                             }
                         }
-                        break;
                     }
-                    case (6):{
-                        break;
+                    case (6) -> {
                     }
-                    default:{
+                    default -> {
                         System.out.println("Digite um valor válido!");
                     }
                 }
@@ -161,9 +146,8 @@ public class Main {
                     break;
                 }
             }
-        }
 
-        /*
+        }
         private static void CalculadoraEspaciais(){
             while (true){
                 System.out.println("---------------------------------");
@@ -180,10 +164,40 @@ public class Main {
                 int opcao = entrada.nextInt();
                 switch(opcao){
                     case (1):{
-                        continue;
+                        while (true) {
+                            try {
+                                System.out.println("Digite o valor da Aresta em centímetros: \n");
+                                double aresta = Calculadora.entrada.nextDouble();
+
+                                Cubo c1 = new Cubo(aresta);
+                                System.out.printf("Volume: %.2fcm\n", c1.calculaVolume());
+                                System.out.printf("Área: %.2fcm²\n", c1.calculaArea());
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Digite um número");
+                                Calculadora.entrada.nextLine();
+                            }
+                        }
                     }
                     case (2):{
+                        while (true) {
+                            try {
+                                System.out.println("Digite o valor da Aresta 1 em centímetros: \n");
+                                double aresta1 = Calculadora.entrada.nextDouble();
+                                System.out.println("Digite o valor da Aresta 2 em centímetros: \n");
+                                double aresta2 = Calculadora.entrada.nextDouble();
+                                System.out.println("Digite o valor da Aresta 3 em centímetros: \n");
+                                double aresta3 = Calculadora.entrada.nextDouble();
 
+                                Paralelepipedo p1 = new Paralelepipedo(aresta1, aresta2, aresta3);
+                                System.out.printf("Volume: %.2fcm\n", p1.calculaVolume());
+                                System.out.printf("Área: %.2fcm²\n", p1.calculaArea());
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Digite um número");
+                                Calculadora.entrada.nextLine();
+                            }
+                        }
                     }
                     case (3):{
 
@@ -206,10 +220,5 @@ public class Main {
                 }
             }
         }
-
-         */
-    }
-    public static void main(String[] args) {
-        Calculadora c1 = new Calculadora();
     }
 }
